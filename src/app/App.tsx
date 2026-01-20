@@ -211,7 +211,7 @@ export const App: React.FC = () => {
 
                             <div className="flex gap-4 mb-16">
                                 <a
-                                    href="https://github.com/RH2004/Merlin-Generator"
+                                    href="https://github.com/RH2004/Merlin-Generator."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-6 py-3 bg-gray-900 dark:bg-white dark:text-gray-900 text-white rounded-2xl font-bold flex items-center gap-2 hover:scale-105 transition-all shadow-xl"
