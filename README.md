@@ -1,8 +1,8 @@
-# Atlas Slides Generator
+# Merlin 🪄
 
 **Deterministic, web-native slide generation from LaTeX-based scientific content**
 
-A compiler-like framework that separates parsing from rendering through a strict intermediate representation (IR). Designed for researchers, STEM instructors, and AI agents to create beautiful, reproducible scientific slide decks.
+A compiler-like framework that separates parsing from rendering through a strict intermediate representation (IR). Designed for researchers, STEM instructors, and AI agents to create beautiful, reproducible scientific slide decks with a touch of magic.
 
 ## 🎯 Core Principles
 

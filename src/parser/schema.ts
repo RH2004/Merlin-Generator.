@@ -1,7 +1,7 @@
 /**
  * IR Schema Documentation
  * 
- * This file documents the complete IR schema for the Atlas Slides Generator.
+ * This file documents the complete IR schema for the Merlin Slide Generator.
  * It serves as the canonical reference for both humans and LLMs generating IR JSON.
  */
 

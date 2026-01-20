@@ -1,5 +1,5 @@
 /**
- * IR Type Definitions for Atlas Slides Generator
+ * IR Type Definitions for Merlin Slide Generator
  * 
  * This file defines the strict intermediate representation (IR) schema
  * that separates parsing from rendering. All nodes use discriminated unions

@@ -60,7 +60,7 @@ export const Slide: React.FC<SlideProps> = ({
                 <div className="slide-footer mt-10 pt-6 border-t border-border-glass flex items-center justify-between text-sm">
                     <div className="flex items-center gap-6">
                         <span className="font-semibold text-gray-400 dark:text-gray-500 tracking-wider">
-                            ATLAS FRAMEWORK
+                            MERLIN FRAMEWORK
                         </span>
                         {isPresenterMode && (
                             <span className="px-3 py-1 bg-yellow-400 font-bold text-black rounded-lg text-xs tracking-tighter shadow-sm">
