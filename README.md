@@ -1,29 +1,37 @@
-# Merlin 🪄
+# Merlin
 
-**Deterministic, web-native slide generation from LaTeX-based scientific content**
+**The deterministic, compiler-native framework for technical storytelling.**
 
-A compiler-like framework that separates parsing from rendering through a strict intermediate representation (IR). Designed for researchers, STEM instructors, and AI agents to create beautiful, reproducible scientific slide decks with a touch of magic.
+Merlin represents a paradigm shift in slide generation. Moving away from fragile templates and visual editors, Merlin treats presentations as code. Built with a strict Intermediate Representation (IR), it ensures that your scientific and technical content is parsed with precision and rendered with a premium, high-end aesthetic automatically.
 
-## 🎯 Core Principles
+## Why Merlin?
 
-- **Semantic over visual**: Slides describe *what* content is, not *how* it looks
-- **Deterministic**: Same input → same output, always
-- **Strict separation**: Parsing and rendering are completely independent
-- **Web-first**: Static deployable, no LaTeX installation required
-- **LLM-safe**: Schema-validated IR for reliable AI generation
+In an era of AI-generated content, presentations need to be more than just "slides." They need to be reproducible, semantically correct, and visually stunning. Merlin is designed for:
 
-## ✨ Features
+- **Researchers**: Convert LaTeX-Lite directly into interactive, web-native presentations.
+- **STEM Educators**: Focus on the math and logic, let the Merlin Engine handle the layout and animations.
+- **AI Agents**: A schema-validated target for LLMs to generate high-fidelity technical decks without "hallucinated" layouts.
 
-- 📝 **LaTeX-Lite Parser**: Restricted LaTeX dialect for slide authoring
-- 🔍 **IR Validation**: Runtime schema validation with Zod
-- 🎨 **Beautiful Rendering**: Modern React components with Framer Motion
-- ➕ **Math Support**: KaTeX rendering with animation modes
-- 🎤 **Presenter Mode**: Hidden notes visible only to presenters
-- 🌓 **Dark Mode**: Automatic theme switching
-- ⌨️ **Keyboard Navigation**: Arrow keys, shortcuts for everything
-- 📱 **Responsive**: Works on all screen sizes
+## Engineering Principles
 
-## 🚀 Quick Start
+- **Zero Layout Logic**: The source describes the *what*. The engine determines the *how*.
+- **Compiler-Grade Precision**: Strict LR-like parsing of LaTeX-Lite source ensures errors are caught early and loudly.
+- **IR-First Architecture**: A robust intermediate layer allows for multiple input formats (LaTeX, JSON, YAML) and multiple potential outputs (React, PDF, CLI).
+- **Aesthetic Determinism**: High-end typography and glassmorphism styling are baked into the core, not added as a theme.
+
+
+## Features
+
+- **LaTeX-Lite Parser**: Restricted LaTeX dialect for slide authoring
+- **IR Validation**: Runtime schema validation with Zod
+- **Beautiful Rendering**: Modern React components with Framer Motion
+- **Math Support**: KaTeX rendering with animation modes
+- **Presenter Mode**: Hidden notes visible only to presenters
+- **Dark Mode**: Automatic theme switching
+- **Keyboard Navigation**: Arrow keys, shortcuts for everything
+- **Responsive**: Works on all screen sizes
+
+## Quick Start
 
 ### Installation
 
@@ -46,7 +54,7 @@ npm run build
 npm run preview
 ```
 
-## 📖 Usage
+## Usage
 
 ### Option 1: Upload a File
 
@@ -64,7 +72,7 @@ npm run preview
 
 Click "Load Example" to see a sample calculus presentation.
 
-## 📄 LaTeX-Lite Syntax
+## LaTeX-Lite Syntax
 
 ### Document Structure
 
@@ -143,7 +151,7 @@ This connects differentiation and integration as inverse operations.
 
 See [`examples/calculus.tex`](file:///c:/Users/user/Downloads/Slides%20Generator/examples/calculus.tex) for a full example.
 
-## 🔧 IR JSON Format
+## IR JSON Format
 
 The IR (Intermediate Representation) is a strict JSON schema. See [`src/parser/schema.ts`](file:///c:/Users/user/Downloads/Slides%20Generator/src/parser/schema.ts) for complete documentation.
 
@@ -180,7 +188,7 @@ The IR (Intermediate Representation) is a strict JSON schema. See [`src/parser/s
 
 See [`examples/graphs.json`](file:///c:/Users/user/Downloads/Slides%20Generator/examples/graphs.json) for a complete example.
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
 | Key | Action |
 |-----|--------|
@@ -191,7 +199,7 @@ See [`examples/graphs.json`](file:///c:/Users/user/Downloads/Slides%20Generator/
 | `P` | Toggle presenter mode |
 | `D` | Toggle dark mode |
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐
@@ -226,7 +234,7 @@ See [`examples/graphs.json`](file:///c:/Users/user/Downloads/Slides%20Generator/
 - **Components** ([`src/renderer/components/`](file:///c:/Users/user/Downloads/Slides%20Generator/src/renderer/components/)): React components for each IR node type
 - **Renderer** ([`src/renderer/SlideRenderer.tsx`](file:///c:/Users/user/Downloads/Slides%20Generator/src/renderer/SlideRenderer.tsx)): Main rendering engine
 
-## 🤖 AI Generation
+## AI Generation
 
 This framework is designed to be **LLM-safe**. AI models can reliably generate slides by outputting IR JSON that conforms to the schema.
 
@@ -255,7 +263,7 @@ Animation modes: none, reveal, highlight
 
 The system will validate and provide clear error messages if the schema is violated.
 
-## 🎨 Customization
+## Customization
 
 ### Tailwind Theme
 
@@ -274,7 +282,7 @@ semantic: {
 
 Edit [`src/styles/globals.css`](file:///c:/Users/user/Downloads/Slides%20Generator/src/styles/globals.css) for CSS variables and typography.
 
-## 📦 Deployment
+## Deployment
 
 ### Static Build
 
@@ -294,7 +302,7 @@ vercel
 
 Drag the `dist/` folder to Netlify or connect your Git repository.
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 
@@ -328,14 +336,14 @@ examples/
 4. Create React component in [`src/renderer/components/`](file:///c:/Users/user/Downloads/Slides%20Generator/src/renderer/components/)
 5. Add mapping in [`src/renderer/SlideRenderer.tsx`](file:///c:/Users/user/Downloads/Slides%20Generator/src/renderer/SlideRenderer.tsx)
 
-## ⚠️ Important Constraints
+## Important Constraints
 
 ### NOT Supported
 
-- ❌ Full LaTeX (only LaTeX-Lite subset)
-- ❌ Arbitrary HTML/JSX injection
-- ❌ Custom commands without schema updates
-- ❌ Silent error recovery
+- Full LaTeX (only LaTeX-Lite subset)
+- Arbitrary HTML/JSX injection
+- Custom commands without schema updates
+- Silent error recovery
 
 ### Design Philosophy
 
@@ -345,16 +353,33 @@ This is a **compiler**, not a template engine:
 - Same input always produces same output
 - Separation of concerns is strictly enforced
 
-## 📚 Further Reading
+## Roadmap
+
+The vision for Merlin is to become the standard for technical presentations. Our roadmap includes:
+
+- [ ] **Merlin CLI**: Headless generation of PDF/Static decks from directories.
+- [ ] **Plugin System**: Support for custom React components via a simple bridge.
+- [ ] **Collaborative Mode**: Real-time sync for remote presentations.
+- [ ] **Enhanced IR**: Support for complex graph layouts and interactive 3D models.
+- [ ] **Template Gallery**: Community-curated themes with the same premium feel.
+
+## Security
+
+Merlin is designed to be **LLM-safe** and **Sandboxed**. 
+- The LaTeX-Lite parser is restricted to a specific subset of commands, preventing arbitrary code execution.
+- Runtime Zod validation ensures that the rendering engine never processes malformed or malicious data.
+- For security vulnerabilities, please refer to our internal disclosure policy in `SECURITY.md` (Coming soon).
+
+## Further Reading
 
 - [IR Schema Documentation](file:///c:/Users/user/Downloads/Slides%20Generator/src/parser/schema.ts)
 - [Implementation Plan](file:///C:/Users/user/.gemini/antigravity/brain/434e35d0-4de2-4f23-a760-6f5e4513bbe4/implementation_plan.md)
 
-## 📝 License
+## License
 
 MIT
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with:
 - React + TypeScript

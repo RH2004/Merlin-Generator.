@@ -452,5 +452,5 @@ export function parseLatexLite(input: string): SlideDeck {
  * Format parser error for user-friendly display
  */
 export function formatParserError(error: ParserError): string {
-    return `❌ Parse Error\n\nLine ${error.line}, Column ${error.column}:\n${error.message}`;
+    return `Parse Error\n\nLine ${error.line}, Column ${error.column}:\n${error.message}`;
 }

@@ -152,7 +152,6 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slideDeck, onClose
                     className="px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-300 dark:border-gray-600 rounded-xl shadow-lg hover:shadow-xl transition-all text-gray-700 dark:text-gray-300 font-bold group flex items-center gap-2 hover:bg-white dark:hover:bg-gray-700 active:scale-95"
                     title="New Presentation (Esc)"
                 >
-                    <span className="group-hover:rotate-90 transition-transform inline-block">➕</span>
                     <span className="hidden md:inline">New</span>
                 </button>
                 <button
@@ -160,7 +159,7 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slideDeck, onClose
                     className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg hover:shadow-xl transition-all text-gray-700 dark:text-gray-300 font-semibold"
                     title="Toggle Dark Mode (D)"
                 >
-                    {isDarkMode ? '☀️' : '🌙'}
+                    {isDarkMode ? 'Light' : 'Dark'}
                 </button>
                 <button
                     onClick={() => setIsPresenterMode(prev => !prev)}
@@ -170,7 +169,7 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slideDeck, onClose
                         }`}
                     title="Toggle Presenter Mode (P)"
                 >
-                    📝
+                    Present
                 </button>
             </div>
 

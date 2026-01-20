@@ -11,7 +11,6 @@ export const PresenterNote: React.FC<PresenterNoteProps> = ({ body, isPresenterM
     return (
         <div className="presenter-note bg-yellow-400 dark:bg-yellow-500/10 border-2 border-yellow-500/20 rounded-3xl p-6 mt-8 shadow-lg">
             <div className="flex items-start gap-4">
-                <span className="text-black dark:text-yellow-400 text-2xl">📝</span>
                 <div className="flex-1">
                     <p className="text-xs font-black text-black dark:text-yellow-400 mb-2 uppercase tracking-[0.2em]">
                         PRESENTER NOTE

@@ -70,7 +70,7 @@ export const App: React.FC = () => {
             } else if (err instanceof ParserError) {
                 setError(formatParserError(err));
             } else if (err instanceof SyntaxError) {
-                setError(`❌ JSON Parse Error\n\n${err.message}`);
+                setError(`JSON Parse Error\n\n${err.message}`);
             } else {
                 setError(err instanceof Error ? err.message : 'Unknown error loading file');
             }
@@ -130,7 +130,6 @@ export const App: React.FC = () => {
                     animate={{ opacity: 1, scale: 1 }}
                 >
                     <div className="mb-8">
-                        <span className="text-4xl">⚠️</span>
                         <h2 className="text-3xl font-bold mt-4 text-gray-900 dark:text-white">Validation Error</h2>
                     </div>
                     <pre className="text-red-600 dark:text-red-400 whitespace-pre-wrap font-mono text-sm mb-10 bg-red-500/5 dark:bg-red-500/10 p-6 rounded-2xl border border-red-500/10">
@@ -205,10 +204,24 @@ export const App: React.FC = () => {
                                 Merlin<br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-accent-500">Generator.</span>
                             </h1>
-                            <p className="text-2xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
-                                A high-end, deterministic framework for technical slide generation.
-                                Built for precision, aesthetics, and LLM safety.
+                            <p className="text-2xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed mb-10">
+                                The deterministic framework for high-fidelity technical storytelling.
+                                Designed for researchers, engineers, and AI agents.
                             </p>
+
+                            <div className="flex gap-4 mb-16">
+                                <a
+                                    href="https://github.com/RH2004/Merlin-Generator"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3 bg-gray-900 dark:bg-white dark:text-gray-900 text-white rounded-2xl font-bold flex items-center gap-2 hover:scale-105 transition-all shadow-xl"
+                                >
+                                    Star on GitHub
+                                </a>
+                                <div className="px-6 py-3 bg-white/50 dark:bg-white/5 border border-border-glass rounded-2xl font-medium text-gray-500 flex items-center gap-2">
+                                    MIT Licensed
+                                </div>
+                            </div>
                         </header>
 
                         <div className="grid md:grid-cols-3 gap-6 mb-16">
@@ -223,7 +236,6 @@ export const App: React.FC = () => {
                                     className="h-full border-2 border-border-glass bg-white/5 hover:bg-white/10 dark:hover:bg-white/5 rounded-4xl p-10 transition-all hover:scale-[1.02] hover:shadow-xl relative overflow-hidden"
                                     whileHover={{ y: -5 }}
                                 >
-                                    <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform">📁</div>
                                     <div className="font-bold text-xl text-gray-900 dark:text-white mb-2 leading-tight">Upload File</div>
                                     <div className="text-sm text-gray-400 dark:text-gray-500 font-mono">.json / .tex / .txt</div>
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700" />
@@ -235,7 +247,6 @@ export const App: React.FC = () => {
                                 className="group h-full text-left border-2 border-border-glass bg-white/5 hover:bg-white/10 dark:hover:bg-white/5 rounded-4xl p-10 transition-all hover:scale-[1.02] hover:shadow-xl relative overflow-hidden"
                                 whileHover={{ y: -5 }}
                             >
-                                <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform">📋</div>
                                 <div className="font-bold text-xl text-gray-900 dark:text-white mb-2 leading-tight">Paste Content</div>
                                 <div className="text-sm text-gray-400 dark:text-gray-500 font-mono">raw input source</div>
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent-500/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700" />
@@ -246,7 +257,6 @@ export const App: React.FC = () => {
                                 className="group h-full text-left bg-gradient-to-br from-primary-500 to-indigo-600 rounded-4xl p-10 transition-all hover:scale-[1.02] hover:shadow-2xl relative overflow-hidden"
                                 whileHover={{ y: -5 }}
                             >
-                                <div className="text-5xl mb-6 transform group-hover:rotate-12 transition-transform">✨</div>
                                 <div className="font-bold text-xl text-white mb-2 leading-tight">Try Demo</div>
                                 <div className="text-sm text-white/60 font-mono">calculus module</div>
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700" />
@@ -294,7 +304,7 @@ export const App: React.FC = () => {
                                             onClick={() => setIsPasteModalOpen(false)}
                                             className="w-12 h-12 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-2xl"
                                         >
-                                            ✕
+                                            X
                                         </button>
                                     </div>
 
@@ -312,7 +322,6 @@ export const App: React.FC = () => {
                                             className="px-12 py-5 bg-primary-500 hover:bg-primary-600 text-white rounded-2xl font-black text-xl transition-all shadow-xl hover:shadow-primary-500/20 active:scale-95 flex items-center gap-3"
                                         >
                                             <span>Generate Slides</span>
-                                            <span className="text-2xl">✨</span>
                                         </button>
                                         <button
                                             onClick={() => setIsPasteModalOpen(false)}

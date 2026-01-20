@@ -182,7 +182,7 @@ export function validateSlideDeck(data: unknown): SlideDeck {
  * Formats validation errors for user-friendly display
  */
 export function formatValidationError(error: ValidationError): string {
-    const header = '❌ IR Validation Failed\n\n';
+    const header = 'IR Validation Failed\n\n';
     const issues = error.issues.map((issue, idx) => {
         const path = issue.path.length > 0 ? issue.path.join('.') : 'root';
         return `${idx + 1}. Path: ${path}\n   Error: ${issue.message}`;
