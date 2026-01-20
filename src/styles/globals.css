@@ -1,0 +1,63 @@
+@import "katex/dist/katex.min.css";
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@theme {
+    --font-outfit: "Outfit", "Inter", "system-ui", "sans-serif";
+    --font-inter: "Inter", "system-ui", "sans-serif";
+    --font-mono: "JetBrains Mono", "Consolas", "monospace";
+
+    --radius-4xl: 2rem;
+    --radius-3xl: 1.5rem;
+    --radius-2xl: 1rem;
+}
+
+:root {
+    /* Light theme */
+    --bg-primary: #f8fafc;
+    --bg-gradient: radial-gradient(circle at 0% 0%, #ffffff 0%, #f1f5f9 100%);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-glass: rgba(255, 255, 255, 0.6);
+    --bg-glass: rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+    /* Dark theme */
+    --bg-primary: #020617;
+    --bg-gradient: radial-gradient(circle at 0% 0%, #0f172a 0%, #020617 100%);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-glass: rgba(255, 255, 255, 0.05);
+    --bg-glass: rgba(15, 23, 42, 0.6);
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* KaTeX customization */
+.katex {
+    font-size: 1.1em;
+}
+
+.katex-display {
+    margin: 1.5rem 0;
+}

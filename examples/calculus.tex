@@ -1,0 +1,50 @@
+\title{Introduction to Calculus}
+
+\slide{Limits}{
+  \definition{Limit}{A value that a function approaches as the input approaches some value.}
+  
+  \equation[animate=reveal]{\lim_{x \to a} f(x) = L}
+  
+  \note{Emphasize that limits are fundamental to calculus and form the basis for derivatives and integrals.}
+}
+
+\slide{L'Hôpital's Rule}{
+  \theorem{L'Hôpital's Rule}{If the limit of f(x)/g(x) as x approaches a gives an indeterminate form (0/0 or ∞/∞), then the limit equals lim f'(x)/g'(x) if it exists.}
+  
+  \equation{\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}}
+  
+  \proof{Follows from the Cauchy Mean Value Theorem. The proof requires showing that the ratio of function values approaches the ratio of their derivatives under certain continuity and differentiability conditions.}
+}
+
+\slide{Derivative Applications}{
+  \algorithm{Finding Critical Points}{
+    Set f'(x) = 0,
+    Solve for x to get critical points,
+    Test each point using second derivative test,
+    f''(x) > 0 implies local minimum,
+    f''(x) < 0 implies local maximum,
+    f''(x) = 0 requires further analysis
+  }
+  
+  \note{Walk through an example on the board using a simple polynomial function.}
+}
+
+\slide{Fundamental Theorem of Calculus}{
+  \theorem{Fundamental Theorem (Part 1)}{If f is continuous on [a,b] and F is an antiderivative of f, then the definite integral from a to b of f(x)dx equals F(b) - F(a).}
+  
+  \equation[animate=highlight]{\int_a^b f(x)\,dx = F(b) - F(a)}
+  
+  This connects differentiation and integration as inverse operations.
+}
+
+\slide{Integration Techniques}{
+  \algorithm{Integration by Parts}{
+    Choose u and dv from the integrand,
+    Compute du and v,
+    Apply formula: ∫u dv = uv - ∫v du,
+    Simplify the resulting integral,
+    Repeat if necessary
+  }
+  
+  \equation{\int u\,dv = uv - \int v\,du}
+}

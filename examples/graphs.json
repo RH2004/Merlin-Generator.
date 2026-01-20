@@ -1,0 +1,99 @@
+{
+    "meta": {
+        "title": "Graph Algorithms",
+        "author": "Computer Science Dept",
+        "date": "2026-01-20"
+    },
+    "slides": [
+        {
+            "type": "slide",
+            "id": "slide-intro",
+            "title": "Graph Fundamentals",
+            "content": [
+                {
+                    "type": "definition",
+                    "title": "Graph",
+                    "body": "A graph G = (V, E) consists of a set of vertices V and a set of edges E, where each edge connects two vertices."
+                },
+                {
+                    "type": "text",
+                    "content": "Graphs model relationships in networks, social connections, maps, and many other real-world scenarios."
+                }
+            ]
+        },
+        {
+            "type": "slide",
+            "id": "slide-bfs",
+            "title": "Breadth-First Search",
+            "content": [
+                {
+                    "type": "algorithm",
+                    "name": "BFS",
+                    "steps": [
+                        "Start at root vertex, mark as visited",
+                        "Add root to queue",
+                        "While queue is not empty:",
+                        "  Dequeue vertex v",
+                        "  For each unvisited neighbor u of v:",
+                        "    Mark u as visited",
+                        "    Enqueue u"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "content": "Time complexity: O(V + E) where V is vertices and E is edges."
+                },
+                {
+                    "type": "note",
+                    "body": "Demonstrate BFS on the whiteboard with a small graph example. Show the queue state at each step."
+                }
+            ]
+        },
+        {
+            "type": "slide",
+            "id": "slide-dijkstra",
+            "title": "Dijkstra's Shortest Path",
+            "content": [
+                {
+                    "type": "theorem",
+                    "title": "Dijkstra's Correctness",
+                    "body": "Dijkstra's algorithm finds the shortest path from a source vertex to all other vertices in a weighted graph with non-negative edge weights."
+                },
+                {
+                    "type": "algorithm",
+                    "name": "Dijkstra",
+                    "steps": [
+                        "Initialize distances: dist[source] = 0, others = ∞",
+                        "Create priority queue with all vertices",
+                        "While queue is not empty:",
+                        "  Extract vertex u with minimum distance",
+                        "  For each neighbor v of u:",
+                        "    If dist[u] + weight(u,v) < dist[v]:",
+                        "      Update dist[v] = dist[u] + weight(u,v)"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "slide",
+            "id": "slide-proof",
+            "title": "Greedy Choice Property",
+            "content": [
+                {
+                    "type": "theorem",
+                    "title": "Greedy Choice Lemma",
+                    "body": "When we select a vertex with minimum distance from the priority queue, that distance is the true shortest path distance."
+                },
+                {
+                    "type": "proof",
+                    "body": "Assume for contradiction that when we extract u, there exists a shorter path. This path must go through some unvisited vertex w. But dist[w] >= dist[u] by the greedy choice, creating a contradiction since edge weights are non-negative."
+                },
+                {
+                    "type": "equation",
+                    "latex": "d(s, u) = \\min_{v \\in V} (d(s, v) + w(v, u))",
+                    "animate": "reveal"
+                }
+            ]
+        }
+    ]
+}
